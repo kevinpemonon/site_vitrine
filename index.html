@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    
+    <header>
+        <div class="wrapper">
+            <h1>Travel Agency<span>.</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#main-page">ACCUEIL</a></li>
+                    <li><a href="#destination">DESTINATIONS</a></li>
+                    <li><a href="#travel">CIRCUITS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="main-page">
+        <div class="wrapper">
+            <h2>ORGANISEZ VOTRE</br><strong>VOYAGE SUR MESURE</strong></h2>
+            <a href="#">Par ici</a>
+        </div>
+    </section>
+
+    <section id="destination">
+        <div class="wrapper">
+            <div>
+                <img src="image/steps-icon-1.png">
+                <h3>PLANIFIER</h3>
+                <p>Confiez-nous vos rêves d'évasions : en famille</br>ou entre amis, nous trouverons la formule qui</br>comblera vos attentes.</p>
+            </div>
+            <div>
+                <img src="image/steps-icon-2.png">
+                <h3>ORGANISER</h3>
+                <p>Bénéficiez de l'expertise de nos spécialistes</br>de chaque destinations, ils vous accompagnent</br>dans la réalisation de votre voyage.</p>
+            </div>
+            <div>
+                <img src="image/steps-icon-3.png">
+                <h3>VOYAGER</h3>
+                <p>Nous nous chargeons d'assurer votre</br>sécurité et de veiller à votre pleine sérénité</br>tout au long de votre voyage.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="travel">
+        <div class="wrapper">
+            <article id="travel-1">
+                <div>
+                    <h3>PARTEZ EN</br>FAMILLE</h3>
+                    <p>Offrez le meilleur à ceux que</br>vous aimez et partagez des</br>moments fabuleux !</p>
+                    <a href="">Plus d'infos</a>
+                </div>
+            </article>
+            <article id="travel-2">
+                <div>
+                    <h3>ENVIE DE</br>S'EVADER</h3>
+                    <p>Parfois un peu d'évasion</br>serait le bienvenue et ferait</br>le plus grand bien !</p>
+                    <a href="">Plus d'infos</a>
+                </div>
+            </article>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="wrapper">
+            <h2>CONTACTEZ-NOUS</h2>
+            <p>Chez Travel Agency nous savons que voyager est une aventure humaine mais également un engagement financier important pour vous. C'est pourquoi nous mettons un point d'honneur à prendre en compte chacune de vos attentes pour vous aider dans la préparation de votre séjour, circuit ou voyage sur mesure.</p>
+            <form>           
+                <label for="name">Nom</label>
+                <input type="text" name="name" id="name" placeholder="Votre nom">
+
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Votre email">
+
+                <input type="submit" value="OK">
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="wrapper">
+            <h1>Travel Agency<span>.</span></h1>
+            <p>Copyright © Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+
+        var positionElementInPage = $('header').offset().top;
+
+        $( window ).resize(function() {
+            positionElementInPage = $('header').offset().top;
+        });
+
+        $(window).scroll(
+            function() {
+                if ($(window).scrollTop() > positionElementInPage) {
+                    // fixed
+                    $('header').addClass("fixedTop");
+                } else {
+                    // unfixed
+                    $('header').removeClass("fixedTop");
+                }
+            }
+        
+        );
+    </script>
+</body>
+</html>
